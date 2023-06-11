@@ -1,0 +1,11 @@
+pip show flask
+pip install -r requirements.txt.
+python -m venv env
+python -m pip install flask
+env\Scripts\activate.bat
+flask run
+set FLASK_ENV=development
+flask run
+alembic revision --autogenerate 
+
+sqlalchemy.url = mysql+mysqlconnector://root:databasesql2022@localhost:3306/mydb2

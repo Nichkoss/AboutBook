@@ -1,0 +1,12 @@
+.flex-column{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+}
+
+.end{
+    align-items: flex-end;
+}
+.simple-input{
+    border-radius: 8px;
+}

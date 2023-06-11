@@ -1,0 +1,78 @@
+<div class="start-page" *ngIf="!isAuthorized">
+  <div class="flexbox" id="log-in">
+    <h3>Log in</h3>
+    <div class="container-1 margin-bottom">
+      <input class="simple-input" id="l-u" type="text" placeholder="Username or Email" name="username" required>
+      <input class="simple-input" id="l-p" type="password" placeholder="Password" name="password" required>
+    </div>
+    <div class="container margin-bottom">
+      <button class="simple-button">
+        <a href="index.html">Back</a>
+      </button>
+
+      <button class="simple-button" (click)="logIn()">
+        Send
+      </button>
+    </div>
+  </div>
+
+  <div class="flexbox" id="sign-in">
+    <h3>Sign in</h3>
+    <div class="container-1 margin-bottom">
+      <input class="simple-input" type="text" id="s-u" placeholder="Username" name="username" minlength="2"
+        maxlength="30" required>
+      <input class="simple-input" type="mail" id="s-e" placeholder="Email" name="email" required>
+      <input class="simple-input" type="password" id="s-p" placeholder="Password" name="password" minlength="4"
+        required>
+      <div clas="flex">
+        <input type="checkbox" name="policy" id="policy" checked>
+        <label for="policy">I have reviewed and agree with the website privacy policy and terms of
+          use</label>
+      </div>
+    </div>
+
+    <div class="container margin-bottom">
+
+      <button class="simple-button">
+        <a href="index.html">Back</a>
+      </button>
+      <button class="simple-button" (click)="signIn()">
+        Send
+      </button>
+    </div>
+  </div>
+
+</div>
+<div class="start-page flexbox" *ngIf="isAuthorized">
+
+  <div [formGroup]="enabledForm" class="flex-column">
+    <h2>Hey, {{ name }}! You can edit your profile below</h2>
+ 
+    <label for="pUsername">Username: </label>
+    <input id="pUsername" type="text" placeholder="New username" formControlName="pUsername" minlength="2">
+  
+    <label for="pPassword">Password: </label>
+    <input id="pPassword" type="password" placeholder="New password" formControlName="pPassword" minlength="4">
+
+    <label for="pPassword2">Repeat Password: </label>
+    <input id="pPassword2" type="password" placeholder="Repeat" formControlName="pPassword2" minlength="4">
+  
+    <label for="pPhone">Phone: </label>
+    <input id="pPhone" type="text" minlength="10" placeholder="093*******" formControlName="pPhone">
+
+    <button class="simple-button" (click)="editProfile()">
+      Send
+    </button>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+
+  <div class ="flex-column end">
+    <h2>You can log out here ↓</h2><button class="simple-button" (click)="logOut()">
+      Exit
+    </button>
+  </div>
+</div>

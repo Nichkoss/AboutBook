@@ -1,0 +1,99 @@
+@import "../../../assets/shared/variables.scss";
+
+body {
+  margin-top: 45px;
+  width: 100%;
+}
+
+.cover_parallax {
+  width: 50%;
+  height: 50%;
+}
+
+.parallax {
+  padding: 200px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+  background-attachment: fixed;
+  background-size: 50%;
+  background-position-x: right;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.placeholder {
+  width: 100%;
+  height: 400px;
+}
+
+.cover-img {
+  width: 378px;
+  position: absolute;
+  top: 0;
+  transition: transform 0.5s ease;
+}
+.cover-img:hover {
+  transform: scale(1.05);
+}
+.description {
+  display: block;
+  color: white;
+  position: absolute;
+  width: 318px;
+  top: 0;
+  height: 574px;
+  font-size: 20px;
+  padding: 30px;
+  background: rgba(20, 20, 20, 0.4);
+}
+
+.show-text {
+  width: 378px;
+  height: 566px;
+  overflow: hidden;
+  position: relative;
+}
+
+.book-info {
+  background-image: linear-gradient(90grad,rgb(42, 4, 77) 10%,black 95%);
+  margin-top: 65px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-content: space-around;
+  justify-content: space-around;
+}
+
+.small-block {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px;
+  width: 325px;
+  // line-height: 0;
+  // font-weight: 400;
+  // letter-spacing: 8px;
+  // text-transform: uppercase;
+  // color: $black;
+}
+
+* {
+  color: white;
+}
+
+.sold-icon {
+
+  path,
+  g,
+  circle {
+    fill: white;
+  }
+  width: 50%;
+  transition: transform 0.5s ease;
+}
+.sold-icon:hover {
+  transform: scale(1.05);
+}

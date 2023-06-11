@@ -1,0 +1,12 @@
+<div class="wrapper" *ngIf="data.filtered">
+  <div class="container">
+    <div class="cover-container">
+      <img class="img-cover" [src]="'../../../assets/covers/' + data.img" />
+    </div>
+    <div class="about">
+      <p>{{data.name}}</p>
+      <p class="tap_details">* tap for details</p>
+    </div>
+  </div>
+
+</div>
